@@ -1,4 +1,16 @@
-import { SiReact, SiJavascript, SiGit, SiFigma } from "react-icons/si";
+import {
+  SiReact,
+  SiJavascript,
+  SiFigma,
+  SiDavinciresolve,
+  SiPython,
+  SiDocker,
+  SiWoocommerce,
+  SiTypescript,
+  SiGithub,
+  SiGitforwindows,
+  SiGithubcopilot,
+} from "react-icons/si";
 import { FaCss3Alt, FaPalette } from "react-icons/fa";
 
 export default function About() {
@@ -6,9 +18,7 @@ export default function About() {
     <section id="about" className="section-block">
       <div className="section-card">
         <h3 className="section-title">About</h3>
-        <p className="section-copy">
-          tu dam rychle bio nejake
-        </p>
+        <p className="section-copy">tu dam rychle bio nejake</p>
 
         <div className="section-grid">
           <div>
@@ -19,10 +29,13 @@ export default function About() {
               <Skill name="Research" pct={88} />
             </ul>
           </div>
-           <div>
+          <div>
             <h4 className="subheading">Education</h4>
             <ul className="skill-list">
-              <Skill name="Business Academy Aarhus - Multimedia Design" pct={55} />
+              <Skill
+                name="Business Academy Aarhus - Multimedia Design"
+                pct={55}
+              />
             </ul>
           </div>
         </div>
@@ -30,12 +43,19 @@ export default function About() {
         <div className="stack-block">
           <h4 className="subheading">Tools & Stack</h4>
           <div className="tool-grid">
-            <ToolCard icon={SiFigma} label="Figma" pct={86} />
-            <ToolCard icon={FaPalette} label="Adobe Design" pct={85} />
-            <ToolCard icon={FaCss3Alt} label="CSS" pct={88} />
-            <ToolCard icon={SiReact} label="React" pct={90} />
-            <ToolCard icon={SiJavascript} label="JavaScript" pct={85} />
-            <ToolCard icon={SiGit} label="Github" pct={80} />
+            <ToolCard icon={SiFigma} label="Figma" />
+            <ToolCard icon={FaPalette} label="Adobe Design" />
+            <ToolCard icon={FaCss3Alt} label="CSS" />
+            <ToolCard icon={SiReact} label="React" />
+            <ToolCard icon={SiJavascript} label="JavaScript" />
+            <ToolCard icon={SiGithub} label="Github" />
+            <ToolCard icon={SiGitforwindows} label="Git" />
+            <ToolCard icon={SiGithubcopilot} label="Copilot" />
+            <ToolCard icon={SiPython} label="Python" />
+            <ToolCard icon={SiDocker} label="Docker" />
+            <ToolCard icon={SiWoocommerce} label="Woocommerce" />
+            <ToolCard icon={SiTypescript} label="Typescript" />
+            <ToolCard icon={SiDavinciresolve} label="Davinci Resolve" />
           </div>
         </div>
       </div>
@@ -57,12 +77,11 @@ function Skill({ name, pct }) {
   );
 }
 
-function ToolCard({ icon: Icon, label, pct }) {
+function ToolCard({ icon: Icon, label }) {
   return (
     <div className="tool-card">
       <Icon className="tool-icon" />
       <p className="tool-label">{label}</p>
-      <p className="tool-pct">{pct}%</p>
     </div>
   );
 }

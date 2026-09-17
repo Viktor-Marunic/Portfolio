@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import LeftPanel from "./components/LeftPanel";
+{/*import LeftPanel from "./components/LeftPanel";*/}
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div className="site-shell">
       <Header />
-      <LeftPanel />
+      {/*<LeftPanel />*/}
       <main className="page-content">
         <div className="page-inner">
           <Hero />

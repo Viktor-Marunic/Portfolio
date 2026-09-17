@@ -1,24 +1,28 @@
 import { useState } from "react";
 import ProjectModal from "./ProjectModal";
+import cphfwprj from "../assets/cphfwprj.png";
+import spillcafeen from "../assets/spillcafeen.png";
 
 const demos = [
   {
     id: 1,
-    title: "Project One",
+    title: "CPHFW Project",
     des: "A placeholder starter project that shows layout and interaction.",
     stack: ["react", "css"],
     repo: "#",
     live: "#",
     preview: "npx run demo",
+    image: cphfwprj,
   },
   {
     id: 2,
-    title: "Project Two",
+    title: "Spilcafeen Project",
     des: "A more advanced demo with API integration placeholder.",
     stack: ["react", "node"],
     repo: "#",
     live: "#",
     preview: "curl http://api.example.com",
+    image: spillcafeen,
   },
   {
     id: 3,
@@ -49,7 +53,7 @@ export default function Projects() {
               <div className="project-path">
                 ~/projects/{p.title.replace(/\s+/g, "-").toLowerCase()}
               </div>
-              <div className="project-thumb">Screenshot</div>
+              <div className="project-thumb" src="//.assets"><img src={p.image} alt="" /></div>
               <h4 className="project-title">{p.title}</h4>
               <p className="project-copy">{p.des}</p>
               <div className="project-footer">

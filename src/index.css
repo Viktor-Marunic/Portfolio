@@ -147,7 +147,6 @@ textarea {
 .section-block > * {
 	width: 100%;
 	max-width: clamp(70rem, 77vw, 100rem);
-	margin-left: 15vw;
 }
 
 .section-stack,
@@ -204,7 +203,7 @@ textarea {
 	height: 50rem;
 	border-radius: 0;
 	box-shadow: none;
-	padding-left: 10rem;
+	padding-left: 2.5rem;
 	padding-right: 1.25rem;
 	padding-top: 2.5rem;
 	padding-bottom: 2.5rem;
@@ -251,13 +250,16 @@ textarea {
 	height: 100%;
 	object-fit: cover;
 	display: block;
-	max-height: 500px;}
+	max-height: 500px;
+	border-radius: 40px;
+}
 
 .hero-title {
 	margin: 0 0 0.8rem;
 	font-size: clamp(2.2rem, 4vw, 3.8rem);
 	line-height: 1.04;
 	letter-spacing: -0.03em;
+	borderra
 }
 
 .accent-text {
@@ -320,7 +322,6 @@ textarea {
 .btn-primary {
 	background: var(--accent-strong);
 	color: white;
-	box-shadow: 2px 3px 15px  #ffffff4f;
 }
 
 .btn-secondary {
@@ -471,8 +472,8 @@ textarea {
 }
 
 .project-thumb {
-	min-height: 12rem;
-	border-radius: 12px;
+	height: 30rem;
+	border-radius: 35px;
 	background: #4f647f;
 	display: flex;
 	align-items: center;
@@ -480,6 +481,12 @@ textarea {
 	color: #dbeafe;
 	margin-bottom: 1rem;
 	font-size: 1.05rem;
+}
+.project-thumb img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: inherit;
 }
 
 .project-title {
@@ -504,7 +511,7 @@ textarea {
 .details-link {
 	border: 0;
 	background: transparent;
-	color: #5ce1da;
+	color: #932F6D;
 	font-weight: 700;
 }
 
