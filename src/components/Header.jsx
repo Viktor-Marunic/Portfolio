@@ -1,6 +1,11 @@
+export default function Header({ onNavigate, activeView }) {
+  function handleNavigation(event, view) {
+    if (view === "contact") {
+      event.preventDefault();
+    }
+    onNavigate(view);
+  }
 
-
-export default function Header() {
   return (
     <header className="site-header">
       <div className="header-inner">
@@ -9,9 +14,26 @@ export default function Header() {
           <span className="brand-name">Viktor(Marunic)</span>
         </h1>
         <nav className="top-nav">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <a
+            href="#about"
+            onClick={(event) => handleNavigation(event, "home")}
+            className={activeView === "home" ? "active" : ""}
+          >
+            About
+          </a>
+          <a
+            href="#projects"
+            onClick={(event) => handleNavigation(event, "home")}
+          >
+            Projects
+          </a>
+          <a
+            href="#contact"
+            onClick={(event) => handleNavigation(event, "contact")}
+            className={activeView === "contact" ? "active" : ""}
+          >
+            Contact
+          </a>
         </nav>
       </div>
     </header>

@@ -1,28 +1,32 @@
-import { useState } from "react";
-import ProjectModal from "./ProjectModal";
 import cphfwprj from "../assets/cphfwprj.png";
-import spillcafeen from "../assets/spillcafeen.png";
+import blasolmain from "../assets/blasolmain2.png";
 
 const demos = [
   {
     id: 1,
     title: "CPHFW Project",
-    des: "A placeholder starter project that shows layout and interaction.",
-    stack: ["react", "css"],
+    des: "One of the first project to practice reasearch, design and coding skills",
+    stack: ["html", "css", "figma"],
     repo: "#",
     live: "#",
-    preview: "npx run demo",
     image: cphfwprj,
+    overview: "A fully responsive web project built from scratch with clean semantic HTML and modern CSS. Developed with a strong focus on clean architecture, visual hierarchy, and user-centered design principles.",
+    role: "Handled the complete end-to-end product lifecycle, including user and competitor research, UI/UX wireframing and prototyping in Figma, and frontend development using HTML and CSS.",
+    process: "Started with comprehensive user and market research to define the core requirements. Translated insights into low- and high-fidelity wireframes and design mockups in Figma, followed by translating the final design into semantic, accessible HTML and responsive CSS layouts.",
+    outcome: "Delivered a polished, performant website with a seamless user experience, bridging the gap between thoughtful design and clean code execution."
   },
   {
     id: 2,
-    title: "Spilcafeen Project",
-    des: "A more advanced demo with API integration placeholder.",
-    stack: ["react", "node"],
+    title: "Bla Sol Project",
+    des: "Website designed for festival with interactive map that has live location",
+    stack: ["react", "css", "javascript", "figma"],
     repo: "#",
     live: "#",
-    preview: "curl http://api.example.com",
-    image: spillcafeen,
+    image: blasolmain,
+    overview: "",
+    role: "",
+    process: "",
+    outcome: ""
   },
   {
     id: 3,
@@ -32,12 +36,14 @@ const demos = [
     repo: "#",
     live: "#",
     preview: "npm run storybook",
+    overview: "",
+    role: "",
+    process: "",
+    outcome: ""
   },
 ];
 
-export default function Projects() {
-  const [selected, setSelected] = useState(null);
-
+export default function Projects({ onSelectProject }) {
   return (
     <section id="projects" className="section-block">
       <div className="section-stack">
@@ -48,12 +54,22 @@ export default function Projects() {
             <article
               key={p.id}
               className="project-card"
-              onClick={() => setSelected(p)}
+              onClick={() => onSelectProject(p)}
+              role="button"
+              tabIndex="0"
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  onSelectProject(p);
+                }
+              }}
             >
               <div className="project-path">
                 ~/projects/{p.title.replace(/\s+/g, "-").toLowerCase()}
               </div>
-              <div className="project-thumb" src="//.assets"><img src={p.image} alt="" /></div>
+              <div className="project-thumb" src="//.assets">
+                <img src={p.image} alt="" />
+              </div>
               <h4 className="project-title">{p.title}</h4>
               <p className="project-copy">{p.des}</p>
               <div className="project-footer">
@@ -64,21 +80,11 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setSelected(p);
-                  }}
-                  className="details-link"
-                >
-                  Details
-                </button>
               </div>
             </article>
           ))}
         </div>
       </div>
-      <ProjectModal project={selected} onClose={() => setSelected(null)} />
     </section>
   );
 }
