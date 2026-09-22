@@ -17,7 +17,7 @@ export default function About() {
     <section id="about" className="section-block">
       <div className="section-card">
         <h3 className="section-title">About</h3>
-        <p className="section-copy">tu dam rychle bio nejake</p>
+        <p className="section-copy">I'm really good at adapting to new environments and communicating with other team members.</p>
 
         <div className="section-grid">
           <div>
