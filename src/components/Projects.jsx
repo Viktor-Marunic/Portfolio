@@ -7,8 +7,8 @@ const demos = [
     title: "CPHFW Project",
     des: "One of the first project to practice reasearch, design and coding skills",
     stack: ["html", "css", "figma"],
-    repo: "#",
-    live: "#",
+    repo: "https://github.com/Viktor-Marunic/CPHFW_project",
+    live: "https://viktor-marunic.github.io/CPHFW_project/",
     image: cphfwprj,
     overview:
       "A fully responsive web project built from scratch with clean semantic HTML and modern CSS. Developed with a strong focus on clean architecture, visual hierarchy, and user-centered design principles.",
@@ -23,14 +23,18 @@ const demos = [
     title: "Bla Sol Project",
     des: "Website designed for festival with interactive map that has live location",
     stack: ["react", "css", "javascript", "figma"],
-    repo: "#",
+    repo: "https://github.com/MichalRadovanHresko/BlueSunFestivalWebApp",
     live: "#",
     image: blasolmain,
-    overview: "",
-    role: "",
-    process: "",
-    outcome: "",
+    overview:
+      "A responsive festival website designed to help visitors explore the event, discover performances, and navigate the venue with an interactive live map.",
+    role: "Handled the research, UX structure, visual design, and frontend development. Focused on making the festival schedule and location information easy to understand on both desktop and mobile.",
+    process:
+      "Started by organizing the festival content and identifying the key visitor journeys. Designed the interface and map experience in Figma, then built the responsive React implementation with reusable components, clear navigation, and live-location interactions.",
+    outcome:
+      "Created an engaging festival experience that combines event discovery with practical wayfinding, helping visitors find stages, activities, and their current location more easily.",
   },
+  /*
   {
     id: 3,
     title: "Project Three",
@@ -44,6 +48,7 @@ const demos = [
     process: "",
     outcome: "",
   },
+  */
 ];
 
 export default function Projects({ onSelectProject }) {

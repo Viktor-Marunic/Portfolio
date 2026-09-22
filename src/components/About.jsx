@@ -6,7 +6,6 @@ import {
   SiPython,
   SiDocker,
   SiWoocommerce,
-  SiTypescript,
   SiGithub,
   SiGitforwindows,
   SiGithubcopilot,
@@ -24,9 +23,21 @@ export default function About() {
           <div>
             <h4 className="subheading">Skills</h4>
             <ul className="skill-list">
-              <Skill name="UX" pct={85} />
-              <Skill name="UI" pct={90} />
-              <Skill name="Research" pct={88} />
+              <Skill
+                name="UX"
+                pct={85}
+                label="Growing through practical projects"
+              />
+              <Skill
+                name="UI"
+                pct={90}
+                label="Strong visual design foundation"
+              />
+              <Skill
+                name="Research"
+                pct={88}
+                label="User-focused research experience"
+              />
             </ul>
           </div>
           <div>
@@ -34,7 +45,8 @@ export default function About() {
             <ul className="skill-list">
               <Skill
                 name="Business Academy Aarhus - Multimedia Design"
-                pct={55}
+                pct={65}
+                label="2025-Present"
               />
             </ul>
           </div>
@@ -54,7 +66,6 @@ export default function About() {
             <ToolCard icon={SiPython} label="Python" />
             <ToolCard icon={SiDocker} label="Docker" />
             <ToolCard icon={SiWoocommerce} label="Woocommerce" />
-            <ToolCard icon={SiTypescript} label="Typescript" />
             <ToolCard icon={SiDavinciresolve} label="Davinci Resolve" />
           </div>
         </div>
@@ -63,12 +74,12 @@ export default function About() {
   );
 }
 
-function Skill({ name, pct }) {
+function Skill({ name, pct, label }) {
   return (
     <li className="skill-item">
       <div className="skill-meta">
         <span>{name}</span>
-        <span>{pct}%</span>
+        <span>{label}</span>
       </div>
       <div className="progress">
         <div className="progress-bar" style={{ width: pct + "%" }} />

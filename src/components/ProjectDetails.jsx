@@ -68,8 +68,12 @@ export default function ProjectDetails({ project, onBack }) {
           <div>
             <h3 className="subheading">Links</h3>
             <div className="modal-links">
-              <a href={project.repo}>Repository</a>
-              <a href={project.live}>Live project</a>
+              <a href={project.repo} target="_blank" rel="noreferrer">
+                Repository
+              </a>
+              <a href={project.live} target="_blank" rel="noreferrer">
+                Live project
+              </a>
             </div>
           </div>
         </div>

@@ -197,6 +197,8 @@ textarea {
   left: 0;
   width: 448px;   
   height: 512px;  
+	z-index: 0;
+	pointer-events: none;
 }
 @media (max-width: 959px) {
   .hero-corner-vector {
@@ -232,6 +234,8 @@ textarea {
 
 .hero-copy-wrap {
 	text-align: left;
+	position: relative;
+	z-index: 1;
 }
 
 .hero-cta-row {
@@ -278,7 +282,7 @@ textarea {
 	margin: 0;
 	color: var(--muted);
 	line-height: 1.7;
-	font-size: clamp(0.5rem, 2vw, 1.4rem);
+	font-size: clamp(1.1rem, 2.5vw, 1.4rem);
 }
 
 .section-copy,
@@ -854,6 +858,12 @@ textarea {
 
 	.project-card {
 		max-width: 100%;
+	}
+}
+
+@media (min-width: 960px) and (max-width: 1199px) {
+	.hero-copy-wrap {
+		padding-left: clamp(1.5rem, 4vw, 3rem);
 	}
 }
 
