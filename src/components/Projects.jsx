@@ -10,10 +10,13 @@ const demos = [
     repo: "#",
     live: "#",
     image: cphfwprj,
-    overview: "A fully responsive web project built from scratch with clean semantic HTML and modern CSS. Developed with a strong focus on clean architecture, visual hierarchy, and user-centered design principles.",
+    overview:
+      "A fully responsive web project built from scratch with clean semantic HTML and modern CSS. Developed with a strong focus on clean architecture, visual hierarchy, and user-centered design principles.",
     role: "Handled the complete end-to-end product lifecycle, including user and competitor research, UI/UX wireframing and prototyping in Figma, and frontend development using HTML and CSS.",
-    process: "Started with comprehensive user and market research to define the core requirements. Translated insights into low- and high-fidelity wireframes and design mockups in Figma, followed by translating the final design into semantic, accessible HTML and responsive CSS layouts.",
-    outcome: "Delivered a polished, performant website with a seamless user experience, bridging the gap between thoughtful design and clean code execution."
+    process:
+      "Started with comprehensive user and market research to define the core requirements. Translated insights into low- and high-fidelity wireframes and design mockups in Figma, followed by translating the final design into semantic, accessible HTML and responsive CSS layouts.",
+    outcome:
+      "Delivered a polished, performant website with a seamless user experience, bridging the gap between thoughtful design and clean code execution.",
   },
   {
     id: 2,
@@ -26,7 +29,7 @@ const demos = [
     overview: "",
     role: "",
     process: "",
-    outcome: ""
+    outcome: "",
   },
   {
     id: 3,
@@ -39,13 +42,13 @@ const demos = [
     overview: "",
     role: "",
     process: "",
-    outcome: ""
+    outcome: "",
   },
 ];
 
 export default function Projects({ onSelectProject }) {
   return (
-    <section id="projects" className="section-block">
+    <section id="projects" className="section-block projects-section">
       <div className="section-stack">
         <h3 className="section-title">Projects</h3>
 

@@ -126,6 +126,12 @@ textarea {
 	color: var(--text);
 }
 
+@media (max-width: 420px) {
+	.top-nav .nav-contact {
+		display: none;
+	}
+}
+
 .page-content {
 	padding: 0 1.25rem 3rem;
 }
@@ -826,7 +832,7 @@ textarea {
 	}
 }
 
-@media (min-width: 960px) {
+@media (min-width: 701px) {
 	.page-content {
 		padding-left: 2.5rem;
 		padding-right: 2rem;
@@ -851,7 +857,13 @@ textarea {
 	}
 }
 
-@media (max-width: 959px) {
+@media (min-width: 701px) and (max-width: 959px) {
+	.project-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 700px) {
 	.header-inner,
 	.footer-inner {
 		padding-left: 1rem;
@@ -859,8 +871,24 @@ textarea {
 	}
 
 	.page-content {
-		padding-left: 1rem;
-		padding-right: 1rem;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.section-block {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.section-stack {
+		border-left: 0;
+		border-right: 0;
+		border-radius: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.section-title {
+		text-align: center;
 	}
 
 	.project-grid,
@@ -872,7 +900,8 @@ textarea {
 	.hero-inner,
 	.section-card,
 	.section-stack {
-		padding: 1.2rem;
+		padding-top: 1.2rem;
+		padding-bottom: 1.2rem;
 	}
 
 	.hero-layout {
@@ -900,6 +929,24 @@ textarea {
 	.project-grid {
 		grid-template-columns: 1fr;
 		gap: 0.9rem;
+	}
+}
+
+@media (max-width: 700px) {
+	.page-content {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.projects-section {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.projects-section > .section-stack {
+		border-left: 0;
+		border-right: 0;
+		border-radius: 0;
 	}
 }
 

@@ -30,7 +30,7 @@ export default function Header({ onNavigate, activeView }) {
           <a
             href="#contact"
             onClick={(event) => handleNavigation(event, "contact")}
-            className={activeView === "contact" ? "active" : ""}
+            className={`nav-contact ${activeView === "contact" ? "active" : ""}`}
           >
             Contact
           </a>
