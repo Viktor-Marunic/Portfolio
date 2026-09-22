@@ -48,8 +48,8 @@ export default function ProjectDetails({ project, onBack }) {
           <article className="project-details-block">
             <h3 className="subheading">Outcome</h3>
             <p className="detail-placeholder">
-              {project.outcome ||"outcomeplaceholder"}
-           </p>
+              {project.outcome || "outcomeplaceholder"}
+            </p>
           </article>
         </div>
 
