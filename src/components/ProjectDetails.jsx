@@ -77,14 +77,14 @@ export default function ProjectDetails({ project, onBack }) {
             </div>
           </div>
         </div>
-
+        {/*
         <div className="project-details-placeholder">
           <h3 className="subheading">Add more project media here</h3>
           <p className="detail-placeholder">
             This space is ready for screenshots, a video, a case study, or
             another preview of the work.
           </p>
-        </div>
+        </div>*/}
       </div>
     </section>
   );
